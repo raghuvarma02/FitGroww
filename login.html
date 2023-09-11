@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FitGroww</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+	<style type="text/css">
+		 :root{ 
+		  --black:#030303;
+		  --radium:rgb(225,250,0);//175,250,0;#AFFA00 rgba(230,250,0)
+		  --white:#E7DFC8;
+		  --grey:#1a1a1a;
+		  --lightwhite:rgba(255,255,255,0.5);
+		}
+		*{
+			font-family: 'Bricolage Grotesque', sans-serif;
+		 }
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+/*			background-color: var(--black);*/
+			overflow: hidden;
+			animation: gradientAnimation 8s infinite;
+		    background: linear-gradient(45deg,#030303,#030303,#030303,#030303,var(--radium),#030303);
+		    background-size: 150% 400%;
+
+		}
+	    @keyframes gradientAnimation {
+		      0% {
+		        background-position: 0% 50%;
+		      }
+		      50% {
+		        background-position: 100% 50%;
+		      }
+		      100% {
+		        background-position: 0% 50%;
+		      }
+	    }
+
+
+		.login-img{
+			width: 40vw;
+			position: fixed;
+			top:0%;
+			left: 0%;
+		}
+		.login
+        {
+        	background-color: var(--grey);
+        	width: 25vw;
+        	padding: 20px;
+        	margin: auto;
+        	margin-top:12%;
+        	margin-left: 55%;
+        	text-align: center;
+        	border-radius: 10px;
+        }
+        .login h1
+        {
+        	color: var(--radium);
+			font-size: 4rem;
+			margin: 15px;
+
+        }
+        .login-input
+        {
+        	background-color: black;
+        	padding: 5%;
+        	margin: 8px;
+        	color: white;
+        	font-size: 1rem;
+        	width: 20vw;
+        	border: none;
+        	border-radius: 5px;
+        }
+        .login-btn
+        {
+        	width: 22.5vw;
+        	background-color: var(--radium);
+        	color: black;
+        	font-weight: bold;
+        }
+        .login-btn:hover
+        {
+        	font-weight: bolder;
+        	background-color: var(--black);
+        	color: var(--radium);
+        	border: 3px solid var(--radium);
+        	padding: calc(5% - 3px);
+        }
+        .create
+        {
+        	text-align: center;
+            color: dimgray ;
+        	font-size: 0.8rem;
+        	text-decoration: none;
+        	margin:auto;
+        	margin-right: 0px;
+        }
+        .create-link
+        {	
+        	color: white;
+        	text-decoration: none;
+        	font-weight: bold;
+        	margin-left: 2px;
+        }
+        .create-link:hover{
+        	text-decoration: underline;
+        }
+	</style>
+</head>
+<body>
+ <div>
+ 	<img src="assets/login-img-greenish.jpg" class="login-img">
+ 	<form class="login" id="login-form" onsubmit="return verifyLogin()" action="index.html">
+ 		<h1>FitGroww</h1>
+ 		<input class="user login-input" type="text" name="email" 
+		placeholder="Username" id="login-username"><br>
+
+		<input class="pass login-input" type="password" name="password" 
+		placeholder="Password" id="login-password"><br>
+
+		<button class="login-btn login-input" type="submit" >Login</button><br>
+
+		<span class="create">Not registered?</span>
+
+		<a href="register.html" class="create create-link">Create an account now!</a>
+ 	</form>
+ </div>
+ <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

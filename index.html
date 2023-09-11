@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FitGroww</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+     <script type="text/javascript" src="https://kit.fontawesome.com/ea6d4fec5e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!--NAV-BAR -->
+	<div>
+	 <nav class="navbar">
+      <h1 class="icon ">FitGroww</h1>
+	  <a href="#home" class="nav-item active-nav-item" data-tab-id="home">Home</a>      
+      <a href="#dashboard" class="nav-item" data-tab-id="dashboard">Dashboard</a>
+	  <a href="#exercises" class="nav-item">Exercises</a>
+	  <a href="#food" class="nav-item">food</a>
+	  <a type="submit" class="login" href="login.html">Login</a>
+	 </nav>
+	</div>
+
+
+	<!-- HOME -->
+	<section id="home" class="home tab active-tab">
+		<div class="hero">
+			<div class="hero-text">
+				 <h1 class="hero-h1">Unleash your potential <br>
+					with <span class="hero-head">FitGroww</span>
+				 </h1>
+				 <div>
+				 	<span class="download">Download</span> 
+					<i class="fa-brands fa-google-play"></i>
+					<i class="fa-brands fa-apple"></i>
+				 </div>
+			 </div>
+			 <img src="assets/hero-img.jpg" class="hero-img">
+		</div>
+	</section>
+
+
+	<!-- DASHBOARD -->
+	<section id="dashboard" class="dash tab">
+		<!-- dashboard -->
+		<div class="dashboard ">
+			<!-- HELLO-BAR -->
+				<div class="hello">
+					<div class="header">
+						<img src="assets/header-svg.svg" alt="header-img" class="hello-img">
+						<h1><span style="color: grey;">Hello,</span>
+							<span id="new-username"> Raghu</span>
+						</h1>
+					</div>
+				</div>
+			<!-- EXERCISE-CARD -->
+				<div class="add-exercise card">
+							<p class="add-e-text">Add Exercise</p>
+							<button class="add-e ">+</button>
+				</div>
+			<!-- PROGRESS BAR -->
+				<div class="bar card">
+						 <div class="sleep info">
+						 	<span>Sleep</span>
+						 	<span>7h15m</span>
+						 </div>
+						 <div class="progress-bar">
+						 	<div class="progress-info"></div>
+						 </div>
+						 <div class="cardio info">
+						 	<span>Cardio</span>
+						 	<span>1h15m</span>
+						 </div>
+						 <div class="progress-bar">
+						 	<div class="progress-info cardio"></div>
+						 </div>
+						 <div class="activity info">
+						 	<span>Activity</span>
+						 	<span>2h10m</span>
+						 </div>
+						 <div class="progress-bar">
+						 	<div class="progress-info activity"></div>
+						 </div>
+				</div>
+			<!-- CARDS -->
+				<div class="add-steps card open-modal" data-modal="steps-modal">
+						<span class="card-num" id="steps-num">3450</span>
+						<p class="card-text">Steps</p>
+						<i class="fa-solid fa-person-walking fa-2xl"></i>
+				</div>
+				<dialog class="modal modal-div " id="steps-modal">
+					<div>
+						<button class="close-modal-btn1 close-btn"
+						 data-modal="steps-modal">X</button>
+						<h1>Enter your recent Steps</h1>
+						<input type="number" name="" id="steps">
+						<br>
+						<button onclick="updateValues('steps','steps-num')" 
+						class="close-modal-btn2 close-btn"
+						data-modal="steps-modal">Save</button>
+					</div>
+				</dialog>
+
+				<div class="pulse-rate card open-modal" data-modal="bpm-modal">
+						<span class="card-num" id="bpm-num">95</span>
+						<p class="card-text" >Bpm</p>
+						<i class="fa-solid fa-heart-pulse fa-2xl"></i>
+				</div>
+				<dialog class="modal modal-div" id="bpm-modal">
+					<div>
+						<button class="close-modal-btn1 close-btn" 
+						data-modal="bpm-modal">X</button>
+						<h1>Enter your recent Bpm</h1>
+						<input type="number" name="" id="bpm">
+						<br>
+						<button onclick="updateValues('bpm','bpm-num')" 
+						class="close-modal-btn2 close-btn"
+						data-modal="bpm-modal">Save</button>
+					</div>
+				</dialog>
+
+				<div class="calories card open-modal" data-modal="calories-modal">
+						<span class="card-num" id="calories-num">1500</span>
+						<p class="card-text">kCal Burnt</p>
+						<i class="fa-solid fa-fire fa-2xl"></i>
+				</div>
+				<dialog class="modal modal-div" id="calories-modal">
+						<div>
+							<button class="close-modal-btn1 close-btn"
+							 data-modal="calories-modal">X</button>
+							<h1>Enter your recent Calories</h1>
+							<input type="number" name="" id="calories">
+							<br>
+							<button onclick="updateValues('calories','calories-num')" class="close-modal-btn2 close-btn"
+							 data-modal="calories-modal">Save</button>
+						</div>
+				</dialog>
+
+				<div class="water card open-modal" data-modal="water-modal">
+						<span class="card-num " id="water-num">3500</span>
+						<p class="card-text ">mL Hydration</p>
+						<i class="fa-solid fa-glass-water fa-2xl"></i>
+				</div>
+				<dialog class="modal modal-div" id="water-modal">
+						<div>
+							<button class="close-modal-btn1 close-btn"
+							data-modal="water-modal">X</button>
+							<h1>Enter your recent Water intake</h1>
+							<input type="number" name="" id="water">
+							<br>
+							<button onclick="updateValues('water','water-num')" 
+							class="close-modal-btn2 close-btn"
+							data-modal="water-modal">Save</button>
+						</div>
+				</dialog>
+			<!-- LIST -->
+
+				<div class="list">
+					<h3 class="list-head">Today Workouts</h3>
+					<div class="list-container">
+						<ul>
+							<li>dumbell squats <span>3x8</span></li>
+							<li>standing shoulder press <span>3x8</span></li>
+							<li>seated calf raises <span>4x10</span></li>
+							<li>dumbell deadlift <span> 2x8</span></li>
+							<li>lateral raises <span> 3x10</span></li>
+							<li>Chest pull <span> 3x15</span></li>
+						</ul>
+					</div>
+				</div>
+	    	<!-- MEALS -->
+
+				<div class="meals">
+					<h3 class="meals-head">Diary</h3>
+					<div class="meals-container">
+						<div class="breakfast">
+							<span>Breakfast</span><button>+</button>
+						</div>
+						<div>
+							<span>Lunch</span><button>+</button>
+						</div>	
+						<div>
+							<span>Snacks</span><button>+</button>
+						</div>	
+						<div>
+							<span>Dinner</span><button>+</button>
+						</div>	
+					</div>
+				</div>
+			<!-- END OF THE DASHBOARD DIV	 -->
+		</div>
+	</section>
+
+<!-- END OF THE DASHBOARD SECTION -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

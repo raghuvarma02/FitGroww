@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+	<style type="text/css">
+		 :root{ 
+		  --black:#030303;
+		  --radium:rgb(225,250,0);//175,250,0;#AFFA00 rgba(230,250,0)
+		  --white:#E7DFC8;
+		  --grey:#1a1a1a;
+		  --lightwhite:rgba(255,255,255,0.5);
+		}
+		*{
+			font-family: 'Bricolage Grotesque', sans-serif;
+		 }
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			animation: gradientAnimation 8s infinite;
+		    background: linear-gradient(45deg,#030303,#030303,#030303,#030303,#affa00,#030303);
+		    background-size: 150% 400%;
+
+		}
+	    @keyframes gradientAnimation {
+		      0% {
+		        background-position: 0% 50%;
+		      }
+		      50% {
+		        background-position: 100% 50%;
+		      }
+		      100% {
+		        background-position: 0% 50%;
+		      }
+	    }
+		.login-img{
+			width: 40vw;
+			position: fixed;
+			top:0%;
+			left: 0%;
+		}
+        .create
+        {
+        	background-color: var(--grey);
+        	width: 25vw;
+        	padding: 20px;
+        	margin: auto;
+        	margin-top:8%;
+        	margin-left: 55%;
+        	text-align: center;
+        	border-radius: 10px;
+        }
+        .create h1
+        {
+        	color: var(--radium);
+			font-size: 4rem;
+			margin: 15px;
+
+        }
+        .register-input
+        {
+        	background-color: var(--black);
+        	padding: 10px;
+        	color: white;
+        	margin: 8px;
+        	width: 20vw;
+        	border: none;
+        	border-radius: 5px;
+        }
+        .register-name{
+        	margin: 3px;
+        	width: 9vw;
+        }
+        .register-btn
+        {
+        	width: 21.5vw;
+        	background-color:var(--radium);
+        	color: black;
+        	
+        }
+        .register-btn:hover
+        {
+        	background-color: black;
+        	color: var(--radium);
+        	border: 2px solid var(--radium);
+        	padding: 9px;
+        }
+        .register-login
+        {
+        	text-align: center;
+            color: dimgray ;
+        	font-size: 0.8rem;
+        	text-decoration: none;
+        	margin:auto;
+        	margin-right: 0px;
+        	margin-top: 5px;
+        }
+        .register-link
+        {
+        	text-decoration: none;
+        	color: white;
+        	font-weight: bold;
+        	margin-left: 2px;
+        }
+        .register-link:hover{
+        	text-decoration: underline;
+        }
+       
+        
+        @media (min-width: 350px max-width:767px) {
+  		body {
+		    background-image: url("loginimg.jpg"); 
+		    background-size: auto; 
+		    background-repeat: repeat;
+		    padding: 20px;
+		  }
+         .create
+        {
+        	background-color: white;
+        	width: 50vw;
+        	padding: 20px;
+        	margin: auto;
+        	margin-top:6%;
+        	text-align: center;
+        	border-radius: 10px;
+        }
+        .reg-input
+        {
+        	font-family: 'Unbounded', cursive;
+			font-weight: 200;
+			font-size: 0.6rem;
+			letter-spacing: 1px;
+        	background-color: rgba(207, 207, 207,0.8);
+        	padding: 10px;
+        	margin: 4px;
+        	width: 40vw;
+        	border: none;
+        	border-radius: 5px;
+        }
+        .name{
+        	margin: 3px;
+        	width: 17vw;
+        }
+        .register-btn
+        {
+			font-family: 'Unbounded', cursive;
+			font-weight: 400;
+        	width: 43.5vw;
+        	background-color: black;
+        	color: white;
+        }
+		}
+	</style>
+</head>
+<body> 
+	<img src="assets/login-img-greenish.jpg" class="login-img">
+ 		
+    	<form class="create" onsubmit="return verifyReg()" action="index.html">
+		<h1>FitGroww</h1>
+		<input class="register-name register-input" type="text" name="text" 
+		placeholder="First name" id="fname">
+
+		<input class="register-name register-input" type="text" name="text" 
+		placeholder="Last name" id="lname">
+ 
+ 		<!-- email username and number -->
+
+		<input class="register-input" type="email" name="email" 
+		placeholder="Email" id="email"><br>
+
+		<input class="user register-input" type="text" name="reg-username" 
+		placeholder="Username" id="reg-username"><br>
+
+		<input class="pass register-input" type="password" name="reg-password" 
+		placeholder="Password" id="reg-password"><br>
+
+		<input class="pass register-input" type="password" name="password" 
+		placeholder="Confirm Password"><br>
+
+		<button class="register-btn register-input" type="submit">Get Started</button><br>
+
+		<span class="register-login">Already have an account?</span>
+
+		<a href="login.html" class="register-login register-link">Login here!</a>
+	</form>
+<script type="text/javascript">
+		function verifyReg()
+		{
+				var regUsername=document.getElementById("reg-username").value;
+				var regPassword=document.getElementById("reg-password").value;
+				var usernameCheck=/^[a-zA-Z ]+$/
+				var passwordCheck=/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]){6}$/
+				if(!regPassword.match(passwordCheck)&&(regUsername==""||regUsername.length<3))
+				{
+					alert('please enter valid username and password');
+					return false;
+				}
+				if(regUsername==""||regUsername.length<3)
+				{
+					alert('please enter a valid name');
+					return false;
+				}
+				if(!regUsername.match(usernameCheck))
+				{
+					alert('name must contain only alphabets');
+					return false;
+
+				}
+				if(!regPassword.match(passwordCheck))
+				{    
+					alert("enter a strong password");
+					return false;
+				}
+ 				return true;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+/*FONT AND COLORS*/
+		*{font-family: 'Bricolage Grotesque', sans-serif;
+		}
+
+		 :root{ 
+		  --black:#030303;
+		  --radium:rgb(225,250,0);//175,250,0;#AFFA00 rgba(230,250,0)
+		  --white:#E7DFC8;
+		  --grey:#1a1a1a;
+		  --lightwhite:rgba(255,255,255,0.5);
+		}
+body{
+	background-color:  var(--black);
+	margin: 0%;
+}
+::-webkit-scrollbar {
+		  width: 6px;
+		}
+::-webkit-scrollbar-thumb {
+		  background-color: var(--radium);
+		  border-radius: 6px; 
+		}
+/*		NAV-BAR*/
+	nav{
+		position: sticky;
+		top:0;
+		background-color: var(--black);
+		display: flex;
+	  align-items: center;
+	  padding: 1% 2% 0%;
+
+	}
+	.icon{
+	    font-weight: 700;
+	    font-size: 2rem;
+	    color:var(--radium);
+	    margin-right: 45%;
+	    margin-top: 1%;
+	}
+	.nav-item{
+		text-decoration: none;
+		font-weight: 500;
+		margin-right: 5%;
+		color: var(--lightwhite);
+	}
+	.login{
+		background-color: var(--radium);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1rem;
+		text-align: center;
+		color: var(--black);
+		width: 4vw;
+		padding: 0.8%;
+		border: none;
+		border-radius: 15px;
+	}
+	.login:hover{
+		border: 3px solid var(--radium);
+		background-color: var(--black);
+		text-align: center;
+		color: var(--radium);
+		padding: 0.6%;
+		transform: 1.8s ease;
+	}
+
+		.active-nav-item{
+			color: white;
+		  font-weight: bolder;
+			text-decoration: underline;
+			text-decoration-color:var(--radium) ;
+			text-decoration-thickness: 2px;
+		}
+		.tab{
+			display: none;
+		}
+
+		.active-tab{
+			display: block;
+		}
+/*		NAV-BAR-END*/
+
+/*HOME*/
+	/*	HERO*/
+	  .hero{
+			padding: 2%;
+			display: flex;
+		  justify-content: space-between;
+		}
+		.hero-text{
+			margin: auto;
+			margin-left: 15%;
+			margin-top: 5%;
+			position:absolute;
+		}
+		.hero-h1{
+			font-size: 5rem;
+			
+		}
+		.hero-head{
+			color: var(--radium);
+		}
+		.hero-img{
+			width: 25%;
+			border-radius: 35px;
+			margin-left: 60%;
+		}
+		.download{
+			width: 10vw;
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: var(--black);
+			padding: 2%;
+			margin: 1%;
+			background-color: var(--radium);
+			border-radius: 15px;
+		}
+		.download:hover{
+			background-color: var(--black);
+			color: var(--radium);
+			border: 3px solid var(--radium);
+			padding: calc(2% - 3px);
+		}
+		 .fa-brands{
+		 	text-align: center;
+		 	width: 2vw;
+		 	padding: 2%;
+		 	margin-right: 1%;
+			color: var(--radium);
+			border-radius: 15px;
+			border: 3px solid var(--radium);
+		}
+		.fa-brands:hover{
+			background-color: var(--radium);
+		 	padding: 2%;
+			color: var(--black);
+			border-radius: 15px;
+			border: 3px solid var(--radium);
+		}
+
+/*HOME-END*/
+
+/*DASHBOARD*/
+		.dashboard{
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			grid-template-columns:1fr 1fr 2fr 1fr 1fr;
+			gap: 15px;
+			margin: 20px;
+			margin-top: 8px;
+			margin-bottom: 0;
+			overflow: hidden;
+		}
+
+		/*HELLO BAR*/
+				.hello{
+					grid-row: 1/2;
+					grid-column: 1/4;
+				}
+				.hello-img{
+					width: 7vw;
+					margin-right: 2%;
+				}
+				.header{
+				  padding: 4%;
+					border-radius: 30px;
+					border: 3px solid var(--radium);
+					display: flex;
+					align-items: center;
+				}
+				h1{
+					color: white;
+				}
+
+
+		/*CARD*/
+				.card{
+					width: 13vw;
+					height: 20vh;
+					border-radius:30px;
+					padding: 1.5vw;
+				  background-color: #1a1a1a;
+				}
+				.card:hover{
+				 border: 2px solid var(--radium);
+				 padding: calc(1.5vw - 2px);
+				}
+				.card-num{
+					font-size: 2rem;
+				 color: var(--radium);
+				}
+				.card-text{
+					color: white;
+					font-size: 1rem;
+				}
+				.card .fa-solid{
+					position: relative;
+					left: 10rem;
+					bottom: 4rem;
+					width: 10vw;
+					height: 10vh;
+					color: var(--radium);
+				}
+
+
+		/*EXERCISE CARD*/
+				.add-exercise{
+					font-weight: 500;
+					font-size: 2rem;
+					text-align: left;
+					color: var(--black);
+					background-color: var(--radium);
+					grid-column: 4/5;
+				}
+				.add-e-text{
+					margin-top: 0%;
+				}
+				.add-e{
+				  background-color: var(--black);
+				  color: var(--radium);
+				  font-size: 3rem;
+				  width: 4vw;
+				  border: none;
+				  margin-top: 5%;
+				  margin-left: 72%;
+				  border-radius: 25%;
+				}
+
+
+		/*PROGRESS-BAR*/
+				.info{ 
+					color: white;
+					margin-top: 5px;
+					font-size: 1rem;
+					display: flex;
+					justify-content: space-between;
+				}
+				.bar .progress-bar{
+					background-color: var(--black);
+					width: 100%;
+					height: 2vh;
+					margin-top: 5px;
+					border-radius: 10px;
+				}
+				.bar .progress-bar .progress-info{
+					background-color: var(--radium);
+					width: 74%;
+					height: 2vh;
+					border-radius: 10px;
+					animation: barinfo 0.5s;
+				}
+				@keyframes barinfo{
+					0%{
+						width: 10%;
+					}
+					100%{
+						width: 100%;
+					}
+				}
+				.bar .progress-bar .activity{
+					width: 45%;
+				}
+				.bar .progress-bar .cardio{
+					width: 25%;
+				}
+
+
+		/*GRID AREA FOR CARDS*/
+			.add-steps{
+				grid-row: 2/3;
+				grid-column: 1/2;
+			}
+			.bar{
+				grid-row: 1/2;
+				grid-column: 5/6;
+			}
+			.pulse-rate{
+				grid-row:2/3;
+			  grid-column: 2/3;
+			}
+			.calories{
+				grid-row: 3/4;
+				grid-column: 1/2;
+			}
+			.water{
+				grid-row: 3/4;
+				grid-column: 2/3;
+			}
+
+
+		/*POPUP MODALS*/
+
+			.modal-active{
+				filter: blur(10px);
+				transition: 0.5s;
+			}
+			.modal-div{
+				background-color: var(--grey);
+				border-radius: 30px;
+				color: var(--radium);
+				position: fixed;
+				top: 50%;
+				left: 20%;
+				transform: translate(-50%,-50%);
+			}
+			.modal-div div{
+				padding: 2%;
+				text-align: center;
+			}
+			.modal-div div .close-modal-btn1{
+				background-color: var(--radium);
+				border: none;
+				border-radius: 5px;
+				padding: 2% 3%;
+				font-size: 1rem;
+				text-align: right;
+				margin-left: 95%;
+			}
+			.modal-div div input{
+			  padding: 5%;
+			  color: white;
+			  background-color: var(--grey);
+			  border: 2px solid var(--radium);
+			  margin: 20px 10px;
+			}
+			.modal-div div .close-modal-btn2{
+				background-color: var(--radium);
+				border: none;
+				border-radius: 5px;
+				padding: 2%;
+				font-size: 1.2rem;
+				margin:auto;
+			}
+
+
+		/*LIST*/
+			.list-head,.meals-head{
+				background-color: var(--radium);
+				color: black;
+				padding: 4%;
+				font-size: 1.5rem;
+				margin-bottom: 0%;
+				margin-top: 0%;
+				border-radius: 30px;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius:0 ;
+			}
+			.list{
+				grid-row: 2/4;
+				grid-column: 3/4;
+			  height: 100%;
+			}
+			.list-container{
+				color: white;
+				background-color: var(--grey);
+				margin-top: 0%;
+				padding: 1% 2%;
+				text-align: center;
+				border-radius: 30px;
+				border-top-left-radius:0;
+				border-top-right-radius:0;
+				list-style: none;
+			}
+			.list-container ul{
+				margin-top: 0%;
+				padding-top: 10px;
+				padding-left: 10px;
+			}
+
+			.list-container ul li{
+				list-style: none;
+				text-align: left;
+				padding: 2%;
+				font-size: 1rem;
+				margin-top: 12px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.list-container ul li span{
+			color: var(--lightwhite);
+			}
+
+
+		/*MEALS LOG*/
+			.meals{
+				grid-row: 2/4;
+				grid-column: 4/6;
+			}
+			.meals-container{
+				color: white;
+				background-color: var(--grey);
+			  padding:1.5% 3%;
+			  border-radius: 30px;
+			  border-top-left-radius:0;
+				border-top-right-radius:0;
+			}
+			.meals-container div{
+				padding: 3%;
+				display: flex;
+				justify-content: space-between;
+				border: 2px solid var(--radium);
+				border-radius: 15px;
+				margin:20px 0px;
+			}
+			.meals-container div button{
+				background-color: var(--radium);
+				color: black;
+				font-size: 1rem;
+				border: none;
+				border-radius: 10px;
+			}
+
+
+
+/*DASHBOARD-END*/
